@@ -39,11 +39,11 @@ elif page=="Audio Genre Prediction":
     tempo=st.slider("tempo",0,125,250)
     
     
-        # Step 1: Convert to array
+        #1: Converting to array
     user_input = np.array([[popularity,duration_ms,danceability,energy,loudness,mode,speechiness,acousticness,instrumentalness,liveness,
                                 valence,tempo]])
 
-        #  Step 2: Scale the input (same as model training)
+        #2: Scaling the input (same as model training)
     user_input_scaled = scaler.transform(user_input)
         
     if st.button("Predict Genre"):
